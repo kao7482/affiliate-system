@@ -1,0 +1,146 @@
+<?php
+
+class Model_AffiliateSetting extends \Model_Base
+{
+    protected static $_table_name = 'affiliate_level_rate';
+    protected static $_parent_key = null;
+    protected static $_primary_key = ['id'];
+
+    protected static $_properties = [
+        'id' => [
+            'data_type' => 'bigint',
+            'label' => 'id',
+            'form' => ['type' => false],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'left',
+            'default' => null,
+        ],
+        'system_id' => [
+            'data_type' => 'bigint',
+            'label' => 'id',
+            'form' => ['type' => false],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'left',
+            'default' => null,
+        ],
+        'scope' => [
+            'data_type' => 'enum',
+            'label' => 'scope',
+            'options' => ['system', 'setting', 'player'],
+            'form' => [
+                'type' => 'radio',
+                'options' => ['system' => 'system', 'setting' => 'setting', 'player' => 'player'],
+                'placeholder' => 'status',
+                'class' => 'form-radio',
+            ],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'left',
+            'default' => null,
+        ],
+        'object_id' => [
+            'data_type' => 'int',
+            'label' => 'object_id',
+            'validation' => [
+                'required',
+            ],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'left',
+            'default' => null,
+        ],
+        'level' => [
+            'data_type' => 'int',
+            'label' => 'level',
+            'validation' => [
+                'required',
+            ],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'left',
+            'default' => null,
+        ],
+        'rate' => [
+            'data_type' => 'decimal',
+            'label' => 'rate',
+            'validation' => [
+                'required',
+            ],
+            'form' => [
+                'type' => 'text',
+                'placeholder' => 'rate',
+                'class' => 'form-control',
+            ],
+            'table' => true,
+            'sort' => true,
+            'search' => true,
+            'align' => 'right',
+            'default' => null,
+        ],
+        'created_id'                => [
+            'data_type' => 'int',
+            'label'     => 'created_id',
+            'form'      => ['type' => false],
+            'table'     => false,
+            'sort'      => false,
+            'search'    => false,
+            'align'     => 'center',
+            'default'   => null,
+        ],
+        'created_at'                => [
+            'data_type' => 'int',
+            'label'     => 'created_at',
+            'form'      => ['type' => false],
+            'sort'      => true,
+            'search'    => false,
+            'default'   => null,
+        ],
+        'updated_id'                => [
+            'data_type' => 'int',
+            'label'     => 'updated_id',
+            'form'      => ['type' => false],
+            'table'     => false,
+            'sort'      => false,
+            'search'    => false,
+            'align'     => 'center',
+            'default'   => null,
+        ],
+        'updated_at'                => [
+            'data_type' => 'int',
+            'label'     => 'updated_at',
+            'form'      => ['type' => false],
+            'table'     => false,
+            'sort'      => false,
+            'search'    => false,
+            'align'     => 'center',
+            'default'   => null,
+        ],
+        'deleted_id'                => [
+            'data_type' => 'int',
+            'label'     => 'deleted_id',
+            'form'      => ['type' => false],
+            'table'     => false,
+            'sort'      => false,
+            'search'    => false,
+            'align'     => 'center',
+            'default'   => null,
+        ],
+        'deleted_at'                => [
+            'data_type' => 'int',
+            'label'     => 'deleted_at',
+            'form'      => ['type' => false],
+            'table'     => false,
+            'sort'      => false,
+            'search'    => false,
+            'align'     => 'center',
+            'default'   => null,
+        ],
+    ];
+}
